@@ -1,0 +1,15 @@
+.dropzone {
+    border: 2px dashed #007bff;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 10px;
+    background: #f8f9fa;
+  }
+  
+  .dropzone.active {
+    background: #cce5ff;
+    border-color: #0056b3;
+  }
+  

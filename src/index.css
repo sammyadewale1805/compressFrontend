@@ -1,0 +1,4 @@
+.container { text-align: center; padding: 20px; }
+.dropzone { border: 2px dashed #007bff; padding: 30px; cursor: pointer; margin: 20px auto; width: 50%; }
+button { padding: 10px; background: #007bff; color: white; border: none; cursor: pointer; }
+progress { width: 50%; height: 20px; }
