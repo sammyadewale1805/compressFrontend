@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+
 import { useDropzone } from 'react-dropzone';
 
 type Props = { onFileSelected: (file: File) => void };
