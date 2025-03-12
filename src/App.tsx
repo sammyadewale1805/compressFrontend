@@ -69,7 +69,7 @@ const App: React.FC = () => {
       const url = await uploadFile(file, trackUploadProgress);
       setCompressedFile(url);
       setStage('completed');
-      setMessage('File compressed successfully!');
+      setMessage('');
     } catch (error) {
       console.error('Compression error:', error);
       setStage('error');
