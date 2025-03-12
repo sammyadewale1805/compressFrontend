@@ -73,7 +73,7 @@ const App: React.FC = () => {
     } catch (error) {
       console.error('Compression error:', error);
       setStage('error');
-      setMessage('Error processing file. Please check if your API server is running at http://localhost:5000.');
+      setMessage('Error processing file. Please check if your API server is running at https://compressbysammy.onrender.com.');
     } finally {
       setIsProcessing(false);
     }
