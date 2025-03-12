@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-const API_URL = 'https://compressbysammy.onrender.com/api/compress';
+const API_URL = 'http://localhost:5000/api/compress';
 
 export const uploadFile = async (file: File, onProgress: (progress: number) => void) => {
   const formData = new FormData();
   formData.append('file', file);
-
+  
   const response = await axios.post(API_URL, formData, {
     responseType: 'blob',
     onUploadProgress: (event) => {
@@ -13,6 +13,6 @@ export const uploadFile = async (file: File, onProgress: (progress: number) => v
       onProgress(percentCompleted);
     },
   });
-
+  
   return URL.createObjectURL(response.data);
 };

@@ -1,15 +1,115 @@
-.dropzone {
-    border: 2px dashed #007bff;
-    padding: 20px;
-    text-align: center;
-    cursor: pointer;
-    transition: 0.3s;
-    border-radius: 10px;
-    background: #f8f9fa;
+/* Add these styles to your index.css file */
+
+/* Progress Bar Styles */
+.progress-container {
+  margin: 16px 0;
+}
+
+.progress-track {
+  width: 100%;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #4CAF50;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 20px 20px;
+  animation: progress-animation 1s linear infinite;
+}
+
+@keyframes progress-animation {
+  0% {
+    background-position: 0 0;
   }
-  
-  .dropzone.active {
-    background: #cce5ff;
-    border-color: #0056b3;
+  100% {
+    background-position: 20px 0;
   }
-  
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+
+.progress-percentage {
+  font-weight: bold;
+}
+
+/* Success Message Styles */
+.success-message {
+  background-color: #e7e5c6;
+  border: 1px solid #ede99b;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 16px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px; /* Set a max-width */
+  text-align: center;
+}
+
+
+.success-icon {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.progress-section {
+  margin: 20px 0;
+}
+
+.progress-section h3 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+button.processing {
+  background-color: #ff9800;
+}
+
+.message.error {
+  color: #d32f2f;
+  background-color: #ffebee;
+  padding: 10px;
+  border-radius: 4px;
+  border-left: 4px solid #d32f2f;
+}
+
+.download-container {
+  margin-top: 20px;
+}
+
+.download-button {
+  display: inline-block;
+  background-color: #2196F3;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.download-button:hover {
+  background-color: #0b7dda;
+}
